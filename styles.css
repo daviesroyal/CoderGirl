@@ -49,13 +49,14 @@ table {
 
 /*My CSS below */
 body {
-	background-image: url('images/WoodDeskTop1.jpg');
+	background-image: url('images/WoodTableTop2.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 4%;
+	padding: 3%;
+	/*TODO create more background images (pen, plant, coffee, placemat, etc) use grid? */
 }
 .iPad {
 	background-color: white;
@@ -68,6 +69,7 @@ body {
 	overflow: scroll;
 	scrollbar-width: none;
 	border-radius: 25px;
+	/* TODO Create bottom border and button? */
 }
 .iPad::-webkit-scrollbar {
 	display: none;
@@ -78,6 +80,7 @@ body {
 	background-blend-mode: overlay;
 	position: relative;
 	border-radius: 25px;
+	/* TODO Create tablet status bar at top with image border?*/
 }
 footer {
 	margin: 5px;
@@ -114,19 +117,75 @@ p {
 }
 figure {
 	display: block;
-	margin-left: 125px;
-	margin-right: 125px;
 	text-align: center;
 	padding: 5px;
 	background-color: #eeeeee;
 	border: 2px solid #f5f5f5;
 	background-clip: padding-box;
+	font-family: 'Courier New', Courier, monospace;
 }
 video {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border: 5px solid black;
+}
+.grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	margin-left: 5px;
+	margin-right: 25px;
+	/* TODO fix polaroid column, use flex?*/
+}
+#griditem1 {
+	grid-column: 1/2;
+}
+#griditem2 {
+	grid-column: 2/3;
+}
+.picbackground {
+	background-image: url('images/Cork1.jpg');
+	border-radius: 25px;
+	/* TODO create cork frame from image border?*/
+}
+.pics {
+	margin: 15px 75px 50px;
+	position:relative;
+	height:500px;
+	width:150px;
+}
+.pics a {
+	background-color:#eeeeee;
+	display:inline;
+	padding:10px 10px 30px 10px;
+	text-align:center;
+	text-decoration:none;
+	color:#333;
+	font-size:16px;
+	font-family: Courier, monospace;
+	font-weight: bold;
+	-webkit-box-shadow:0px 0px 10px rgba(0,0,0,1);
+	-moz-box-shadow:0px 0px 10px rgba(0,0,0,1);
+	box-shadow:0px 0px 10px rgba(0,0,0,1);
+	-webkit-transition:all .30s;
+	-moz-transition:all .30s;
+	-o-transition:all .30s;
+	transition:all .30s;
+	position:absolute;
+}
+.pics a:after {
+	content:attr(title);
+}
+.pics li:nth-child(1n) a {-webkit-transform:rotate(30deg) scale(0.7,0.7);-moz-transform:rotate(30deg) scale(0.7,0.7);transform:rotate(30deg) scale(0.7,0.7);top:0%;left:60%;}
+.pics li:nth-child(2n) a {-webkit-transform:rotate(-30deg) scale(0.7,0.7);-moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);top:40%;left:80%;}
+.pics li:nth-child(3n) a {-webkit-transform:rotate(40deg) scale(0.7,0.7);-moz-transform:rotate(40deg) scale(0.7,0.7);transform:rotate(40deg) scale(0.7,0.7);top:50%;left:-10%;}
+.pics li:nth-child(n) a:hover {-webkit-transform:rotate(0deg) scale(1,1);-moz-transform:rotate(0deg) scale(1,1);transform:rotate(0deg) scale(1,1);}
+.pics img {
+	display:block;
+	padding-bottom:20px;
+}
+.pics a:hover {
+	z-index:100;
 }
 #wrapText {
 	margin-left: 210px;
