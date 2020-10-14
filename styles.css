@@ -69,6 +69,10 @@ body {
 	overflow: scroll;
 	scrollbar-width: none;
 	border-radius: 25px;
+	box-shadow:  0 0 10px 5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+	-o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
 	/* TODO Create bottom border and button? */
 }
 .iPad::-webkit-scrollbar {
